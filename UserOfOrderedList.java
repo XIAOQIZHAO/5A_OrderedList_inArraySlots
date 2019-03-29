@@ -12,46 +12,49 @@ public class UserOfOrderedList {
 
 	
         int elemIndex;
-    	for( elemIndex = 0; elemIndex < 5; elemIndex += 2 ) {
+    	for( elemIndex = 0; elemIndex < 5; elemIndex++ ) {
             list.add( elemIndex); // differs from index, but similar
             System.out.println( "number of elements: " + list.size() );
         }
         System.out.println("initial population of " + list.size() + " elements:");
         System.out.println( list + System.lineSeparator());
-
-	for( ; elemIndex < 15; elemIndex++ ) {
-
-            if( elemIndex == 10) System.out.println( "expansion expected");
-
-            list.add( -elemIndex);
-            System.out.println( "number of elements: " + list.size() );
-        }
-        System.out.println("result of second population: " + list.size() + " elements:");
-        System.out.println( list + System.lineSeparator());
-
 	list.add (3);
 	System.out.println( list + System.lineSeparator());
-	list.add (-2);
-	System.out.println( list + System.lineSeparator());
+	
+	// for( ; elemIndex < 15; elemIndex++ ) {
+
+        //     if( elemIndex == 10) System.out.println( "expansion expected");
+
+        //     list.add( -elemIndex);
+        //     System.out.println( "number of elements: " + list.size() );
+        // }
+        // System.out.println("result of second population: " + list.size() + " elements:");
+        // System.out.println( list + System.lineSeparator());
+
+
 	list.add (-20);
 	System.out.println( list + System.lineSeparator());
+	list.add (8);
+	System.out.println( list + System.lineSeparator());
+	list.add (1);
+	System.out.println( list + System.lineSeparator());
 
 
-    // 	// test accessor
-    //     System.out.println( "sample elements from list:");
-    //     for( elemIndex = 1; elemIndex < list.size(); elemIndex *= 2 ) {
-    //         System.out.println( "element " + elemIndex + ": "
-    //                           + list.get( elemIndex)
-    //                           );
-    //     }
+    	// test accessor
+        System.out.println( "sample elements from list:");
+        for( elemIndex = 1; elemIndex < list.size(); elemIndex *= 2 ) {
+            System.out.println( "element " + elemIndex + ": "
+                              + list.get( elemIndex)
+                              );
+        }
 
-    // 	// test removing an element
-    //     System.out.println("removing value " + list.remove( 6)
-    //                       + ", leaving " + list.size() + " elements:");
-    //     System.out.println( list);
-    //     System.out.println(
-    //         "expecting:" + System.lineSeparator()
-    //       + "[29,0,23,23,23,19, NO -1 HERE! -2,-3...]");
+    	// test removing an element
+        System.out.println("removing value " + list.remove( 6)
+                          + ", leaving " + list.size() + " elements:");
+        System.out.println( list);
+        System.out.println(
+            "expecting:" + System.lineSeparator()
+          + "[29,0,23,23,23,19, NO -1 HERE! -2,-3...]");
 
     // 	//test set
     // 	System.out.println( setTest(  8));
