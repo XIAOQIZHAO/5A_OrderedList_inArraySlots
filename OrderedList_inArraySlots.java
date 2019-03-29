@@ -24,9 +24,10 @@ public class OrderedList_inArraySlots {
 	int counter = 1;
 	while (value != list.get(index) && index > 0 && index < size()) {
 	    counter++;
-	    if (value > list.get(index)) index =
-		         (int)(list.size() * (1 - 1.0/Math.pow(2, counter)));
-	    else if (value < list.get(index)) index = index / 2;
+	    if (value > list.get(index))
+		index += (int)(list.size() * (1.0/Math.pow(2, counter)));
+	    else if (value < list.get(index))
+		index -= (int)(list.size() * (1.0/Math.pow(2, counter)));
 	}
 	list.add(index, value);
 	return true;
