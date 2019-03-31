@@ -7,9 +7,6 @@ public class UserOfOrderedList {
 	System.out.println( "number of elements: " + list.size() );
         System.out.println( "empty list: " + list);
 
-	// List_inArraySlots l = new List_inArraySlots();
-	// System.out.println(l.get(0));
-
 	
         int elemIndex;
     	for( elemIndex = 0; elemIndex < 5; elemIndex++ ) {
@@ -21,25 +18,24 @@ public class UserOfOrderedList {
 	list.add (3);
 	System.out.println( list + System.lineSeparator());
 	
-	// for( ; elemIndex < 15; elemIndex++ ) {
+	for( ; elemIndex < 15; elemIndex++ ) {
 
-        //     if( elemIndex == 10) System.out.println( "expansion expected");
+            if( elemIndex == 10) System.out.println( "expansion expected");
 
-        //     list.add( -elemIndex);
-        //     System.out.println( "number of elements: " + list.size() );
-        // }
-        // System.out.println("result of second population: " + list.size() + " elements:");
-        // System.out.println( list + System.lineSeparator());
+            list.add( -elemIndex);
+            System.out.println( "number of elements: " + list.size() );
+        }
+        System.out.println("result of second population: " + list.size() + " elements:");
+        System.out.println( list + System.lineSeparator());
 
 
 	list.add (-20);
-	System.out.println( list + System.lineSeparator());
 	list.add (8);
-	System.out.println( list + System.lineSeparator());
 	list.add (1);
+	System.out.println("result of third population: " + list.size() + " elements:");
 	System.out.println( list + System.lineSeparator());
 
-
+	
     	// test accessor
         System.out.println( "sample elements from list:");
         for( elemIndex = 1; elemIndex < list.size(); elemIndex *= 2 ) {
@@ -54,7 +50,7 @@ public class UserOfOrderedList {
         System.out.println( list);
         System.out.println(
             "expecting:" + System.lineSeparator()
-          + "[29,0,23,23,23,19, NO -1 HERE! -2,-3...]");
+          + "[-20,-14,-13,-12,-11,-10,-8,-7,-6,-5,0,1,1,2,3,3,4,8,]");
 
     // 	//test set
     // 	System.out.println( setTest(  8));
