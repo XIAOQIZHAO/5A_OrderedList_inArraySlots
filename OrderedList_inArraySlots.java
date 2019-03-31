@@ -76,4 +76,20 @@ public class OrderedList_inArraySlots {
     public int remove(int index) {
 	return list.remove(index);
     }
+
+    public boolean set ( int index, int value) {
+	if (index == 0 && list.get(1) >= value){
+	    list.set(index, value);
+	    return true;
+	}
+	if (index == list.size() - 1 && list.get(list.size() - 2) <= value){
+	    list.set(index, value);
+	    return true;
+	}
+	if (list.get(index - 1) <= value && list.get(index + 1) >= value){
+	    list.set(index, value);
+	    return true;
+	}
+	return false;
+    }
 }

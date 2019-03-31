@@ -1,8 +1,8 @@
 
 public class UserOfOrderedList {
-
+    private static OrderedList_inArraySlots list;
     public static void main(String[] args){
-	OrderedList_inArraySlots list = new OrderedList_inArraySlots();
+	list = new OrderedList_inArraySlots();
 
 	System.out.println( "number of elements: " + list.size() );
         System.out.println( "empty list: " + list);
@@ -52,22 +52,30 @@ public class UserOfOrderedList {
             "expecting:" + System.lineSeparator()
           + "[-20,-14,-13,-12,-11,-10,-8,-7,-6,-5,0,1,1,2,3,3,4,8,]");
 
-    // 	//test set
-    // 	System.out.println( setTest(  8));
-    //     System.out.println( setTest( 16));
-    //     System.out.println();
-	
-    // }
+    	//test set
+	setTest(  8);
+	setTest( 16);
+	setTest( 17);
+        System.out.println();
+	System.out.println( list);
 
-    // /**
-    // Test the set() method, reporting and
-    // changing the value at index @modifyAt.
-    //  */
-    // private static void setTest( int modifyAt) {
-    //     System.out.println(
-    //         "changed element " + modifyAt + " from "
-    //       + list.set( modifyAt, modifyAt + 1000) + " to "
-    //       + list.get( modifyAt)
-    //       );
+    }
+
+    /**
+    Test the set() method, reporting and
+    changing the value at index @modifyAt.
+     */
+    private static void setTest( int modifyAt) {
+	System.out.println("change element " + modifyAt + " from "
+			   +  list.get( modifyAt) + " to " + (modifyAt + 1000) + ":");
+	int old = list.get(modifyAt);
+	if (list.set( modifyAt, modifyAt + 1000))
+        System.out.println(
+            "changed element " + modifyAt + " from "
+          + old + " to "
+          + list.get( modifyAt)
+          );
+	else
+	    System.out.println("not allowed");
      }
 }
