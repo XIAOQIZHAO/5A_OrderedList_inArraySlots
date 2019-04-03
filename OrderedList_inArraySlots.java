@@ -29,6 +29,13 @@ public class OrderedList_inArraySlots {
 	}
 	else
 	    return add (value, 0, list.size() - 1);
+
+	
+	// alternatively, more cost iteration through
+	// int index = 0;
+	// for (; index < list.size() && list.get(index) < value; index++)
+	// return add(index, value);
+
 	
 	// code below not working
 	// int index = (size() + 1) /2;
@@ -67,11 +74,6 @@ public class OrderedList_inArraySlots {
 	}
 	else
 	    return add(value, mid, right);
-
-	// alternatively, more cost iteration through
-	// int index = 0;
-	// for (; index < list.size() && list.get(index) < value; index++)
-	// return add(index, value);
     }
 
     public int get(int index) {
